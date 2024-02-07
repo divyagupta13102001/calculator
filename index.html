@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .container{
+            margin: 150px;
+            padding: 10px;
+            padding-top: 50px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 270px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: black;
+            border-radius: 10px;
+            background-color: rgb(90, 88, 88);
+        }
+        #result{
+            width: 250px;
+            height: 42px;
+            background-color: white;
+        }
+        #number-input{
+            width: 250px;
+            height: 42px;
+            background-color: white;
+        }
+        .row{
+            display: flex;
+            height: 42px;
+            padding: 3px;
+            margin: 3px;
+        }
+        .col{
+            background-color: rgb(189, 185, 185);
+            margin: 3px;
+            height: 42px;
+            width: 42px;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 50px;
+            border-color: black;
+        }
+       
+        .col:hover{
+            background-color: yellow;
+        }
+        .signs{
+            background-color: rgb(233, 224, 128);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+            <input type="text" disabled id="number-input" />
+            <input placeholder="ANS" type="text" disabled id="result" />
+   
+       
+    <div class="row">
+        <div onclick=HandleClic(this) class="signs col">+</div>
+        <div onclick=HandleClic(this) class="signs col">*</div>
+        <div onclick=HandleClic(this) class= "signs col">/</div>
+        <div onclick=HandleClic(this) class="signs col">-</div>
+       </div>
+   <div class="row">
+    <div onclick=HandleClic(this) class="col">7</div>
+    <div onclick=HandleClic(this) class="col">8</div>
+    <div onclick=HandleClic(this) class="col">9</div>
+    <div onclick=reset() class="col" id="clear">C</div>
+   </div> 
+   <div class="row">
+    <div onclick=HandleClic(this) class="col">4</div>
+    <div onclick=HandleClic(this) class="col">5</div>
+    <div onclick=HandleClic(this) class="col">6</div>
+    <div onclick=HandleClic(this) class="col">0</div>
+   </div> 
+   <div class="row">
+    <div onclick=HandleClic(this) class="col">1</div>
+    <div onclick=HandleClic(this) class="col">2</div>
+    <div onclick=HandleClic(this) class="col">3</div>
+    <div onclick=HandleClic(this) class="col">.</div>
+   </div> 
+   <div class="row">
+   
+    </div>
+   </div> 
+   <script src="script.js"></script>
+</body>
+</html>
